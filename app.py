@@ -62,7 +62,10 @@ with open('input.txt') as fr:
     inputsArray = fr.readlines()
     for inp in inputsArray:
         inputArray = inp.split()
-        searchAndGetData(inputArray[0], inputArray[1])
+        if (len(inputArray) == 2):
+            searchAndGetData(inputArray[0], inputArray[1])
+        else:
+            searchAndGetData(inputArray[0], 'username')
 
 for index, data in enumerate(finalResultsForXLS):
     for i in range(3):
